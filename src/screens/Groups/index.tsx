@@ -9,9 +9,16 @@ import { ListEmpty } from '@components/ListEmpty';
 import { Container } from './styles'
 import { Button } from '@components/Button'
 
+import { useNavigation } from '@react-navigation/native'
 
 export function Groups() {
     const [groups, setGroups] = useState<string[]>([]);
+
+    const navigation = useNavigation();
+
+    const handleNewGroup = () => {
+        navigation.navigate('new');
+    }
 
     return (
         <Container>
@@ -39,6 +46,7 @@ export function Groups() {
 
             <Button
                 title="Criar nova turma"
+                onPress={handleNewGroup}
             />
 
         </Container>
