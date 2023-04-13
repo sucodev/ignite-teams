@@ -9,7 +9,7 @@ import { Loading } from "@components/Loading";
 
 import { Routes } from './src/routes';
 
-// test comment II
+// test comment III
 export default function App() {
 
   const [fontsLoaded] = useFonts({
